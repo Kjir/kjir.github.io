@@ -13,7 +13,8 @@ pre.highlight code,
   white-space: pre-wrap;
 }
 
-.btn, .navigation__item a {
+.btn, 
+.navigation__item a {
   margin: 5px 0;
   white-space: nowrap;
 }
@@ -23,6 +24,7 @@ pre.highlight code,
   padding: 10px;
 }
 
+.categories a,
 .tags a {
   border: 1px solid #e25440;
   border-radius: 20px;
