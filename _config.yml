@@ -11,7 +11,8 @@ author:
   email: stephane.bisinger@gmail.com
   twitter_username: SteBjoerne
   github_username:  Kjir
-  facebook_username: ste.bis
+  facebook_username: stephane.bis
+  gravatar: b6b7cec33b810ab28ec19be4b4747028
 
 # Build settings
 destination: _site
@@ -27,7 +28,6 @@ gems:
 kramdown:
   input: GFM
   hard_wrap: false
-
 
 defaults:
   -
