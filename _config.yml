@@ -1,21 +1,38 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Code Lilies
+description: 'Code Lilies - Beautiful tricks from the swamp'
+url: 'http://www.sbisinger.net/'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+disqus_shortname: 'codelilies'
+
+author:
+  name: 'Stéphane Bisinger'
+  email: stephane.bisinger@gmail.com
+  twitter_username: SteBjoerne
+  github_username:  Kjir
+  facebook_username: ste.bis
 
 # Build settings
-markdown: kramdown
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+
+gems:
+    - 'jekyll-paginate'
+    - 'jekyll-coffeescript'
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
