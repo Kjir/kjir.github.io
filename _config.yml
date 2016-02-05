@@ -5,6 +5,7 @@ url: 'http://www.sbisinger.net/'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 disqus_shortname: 'codelilies'
+timezone: Europe/Rome
 
 author:
   name: 'Stéphane Bisinger'
