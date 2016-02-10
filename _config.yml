@@ -1,7 +1,7 @@
 # Site settings
 title: Code Lilies
 description: 'Code Lilies - Beautiful tricks from the swamp'
-url: 'http://www.sbisinger.net/'
+url: 'http://www.sbisinger.net'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 disqus_shortname: 'codelilies'
