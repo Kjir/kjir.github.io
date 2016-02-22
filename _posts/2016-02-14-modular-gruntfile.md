@@ -288,7 +288,7 @@ without having them modify the files which are under versioning. Pretty neat!
 ## Conclusion
 
 `load-grunt-config` is a very nice grunt plugin which really improves the
-quality of you Gruntfile by splitting it into many smaller files. Not only
+quality of your Gruntfile by splitting it into many smaller files. Not only
 that: it adds a lot of useful features that will make you wonder why bother
 writing plain `Gruntfile`s anymore!
 
