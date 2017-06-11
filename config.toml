@@ -5,6 +5,7 @@ pygmentCodeFences = true
 languageCode = "en-us"
 title = "Code Lilies"
 disqusShortname = 'codelilies'
+theme = "minimalist"
 [params]
     site_author = "Stéphane Bisinger"
     site_description = "Solutions to programming problems in the strive for elegance"
