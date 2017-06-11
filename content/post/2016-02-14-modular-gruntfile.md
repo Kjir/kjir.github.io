@@ -1,8 +1,11 @@
 ---
-title:  "A modular Gruntfile"
-date:   2016-02-14 21:02:00+0100
-categories: [grunt]
-tags: [grunt]
+categories:
+- grunt
+date: 2016-02-14T21:02:00Z
+tags:
+- grunt
+title: A modular Gruntfile
+url: /2016/02/14/modular-gruntfile/
 ---
 
 [Grunt](http://www.gruntjs.com/) is a very powerful task runner and if you are

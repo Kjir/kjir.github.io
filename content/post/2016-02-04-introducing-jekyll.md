@@ -1,9 +1,11 @@
 ---
-layout: post
-title:  "Introducing Jekyll!"
-date:   2016-02-04 00:14:00
-categories: [jekyll]
-tags: [jekyll]
+categories:
+- jekyll
+date: 2016-02-04T00:14:00Z
+tags:
+- jekyll
+title: Introducing Jekyll!
+url: /2016/02/04/introducing-jekyll/
 ---
 
 Welcome to my new blog, Code Lilies: Beautiful tricks from the swamp.
