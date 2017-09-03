@@ -7,29 +7,43 @@ title = "Code Lilies"
 disqusShortname = 'codelilies'
 theme = "minimalist"
 [params]
-    site_author = "Stéphane Bisinger"
-    site_description = "Solutions to programming problems in the strive for elegance"
-    location = "Zürich"
-    # Link custom assets relative to /static
-    avatar = "images/profile.png"
-    header_background = "images/editor.png"
-    header_title = "Code Lilies"
-    copyright = "Powered by [Hugo](http://gohugo.io)."
-    custom_css = []
-    custom_js  = []
+  site_author = "Stéphane Bisinger"
+  site_description = "Solutions to programming problems in the strive for elegance"
+  location = "Zürich"
+  # Link custom assets relative to /static
+  avatar = "images/profile.png"
+  header_background = "images/editor.png"
+  header_title = "Code Lilies"
+  copyright = "Powered by [Hugo](http://gohugo.io)."
+  custom_css = []
+  custom_js  = []
 
-    # Enable gogle analytics by entering your tracking code
-    google_analytics = ""
+  # Enable gogle analytics by entering your tracking code
+  google_analytics = ""
+
+[permalinks]
+  post = "/:year/:month/:day/:title/"
 
 [social]
-    # Add your social network accounts to the profile section on the left
-    # by entering your username. The links to your account will be
-    # create automatically.
-    twitter   = "SteBjoerne"
-    facebook  = "stephane.bis"
-    linkedin  = ""
-    behance   = ""
-    dribbble  = ""
-    instagram = ""
-    github    = "Kjir"
-    gplus     = ""
+  # Add your social network accounts to the profile section on the left
+  # by entering your username. The links to your account will be
+  # create automatically.
+  twitter   = "SteBjoerne"
+  facebook  = "stephane.bis"
+  linkedin  = ""
+  behance   = ""
+  dribbble  = ""
+  instagram = ""
+  github    = "Kjir"
+  gplus     = ""
+  email     = "stephane.bisinger@protonmail.com"
+[[menu.main]]
+  name = "Home"
+  weight = -120
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "CV"
+  weight = -110
+  identifier = "cv"
+  url = "https://www.stackoverflow.com/story/stebis"
