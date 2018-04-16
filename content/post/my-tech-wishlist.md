@@ -88,7 +88,7 @@ them!
 * **Java**: I find Java extremely boring. I think Java might be the main
   reason I'm not a fan of statically typed languages! I mean to this day you
   need XML (yuck!) and an IDE to generate code for you if you want to keep
-  you sanity. It's love for abstractions really clashes with my minimalist
+  your sanity. It's love for abstractions really clashes with my minimalist
   approach.
 * **C#**: Although I've never been a fan of Microsoft, I must admit that in
   the last years they changed their approach completely. Nonetheless, C# is
