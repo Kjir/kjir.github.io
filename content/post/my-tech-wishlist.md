@@ -1,6 +1,7 @@
 ---
 title: "My Tech Wishlist"
 date: 2018-04-16T11:05:41+02:00
+description: "Here is a list of technologies I would love to work with in my next job"
 ---
 
 Due to [some big
