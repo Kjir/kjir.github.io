@@ -35,9 +35,7 @@ the company values.
   hear from you.
 * **Good working conditions**: This means european levels of social benefits
   and working conditions that help taking care of a family. A successful
-  company should know better ways to track productivity than using a clock. I
-  sometimes lose track of time and work longer than I should. This leads to a
-  bad performance the next day, which in the end hurts the company as well.
+  company should know better ways to track productivity than using a clock.
   Quality over quantity!
 * **Influence**: I am enthusiastic and opinionated; I love challenges and I
   want my work to be impactful. I want the company I work for to be successful,
