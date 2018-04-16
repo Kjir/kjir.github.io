@@ -5,32 +5,31 @@ date: 2018-04-16T11:05:41+02:00
 
 Due to [some big
 changes](https://www.coop.ch/de/ueber-uns/medien/medienmitteilungen/2018/coop-uebernimmt-swisscom-anteile-an-siroop.html)
-involving the company I'm currently working in, I will soon move on to new
-challenges.
+involving the company I'm currently working at, I will soon move on to a new
+challenge.
 
 But what are the challenges I'd like to work on in the next months?
-Here are *my lists* for things that excite me and things that don't.
+Here is *my list* with things that excite me and things that don't.
 
 ## Job Utopia?
 
-Finding a job that would match all the following criterias is impossible. As
-any wishlist, this is just a listing of what currently interests me. That
-doesn't mean I won't settle for anything less: some things are negotiable, some
-others are not. The objective is to collect my ideas in one place, so that I
-have a guideline for checking where eventual job offers stand. It can also help
-others understand more what kind of person I am.
+Finding a job that would match all the following criteria is impossible. As
+with any wishlist, this is just a listing of what currently interests me: some
+things are negotiable, some are not. The objective is to collect my thoughts in
+one place, so that I have a reference to compare potential job offers with. It
+can also help potential employers understand more what kind of person I am.
 
 ## Company values
 
-One of the most important points for me when looking for a new job is to check
-which company I'm going to work for.
+One of the most important points for me when looking for a new job is to verify
+the company values.
 
 ### Must haves
 
 * **A clear purpose**: I recently read [Start with
   Why](https://www.goodreads.com/book/show/7108725-start-with-why) from Simon
   Sinek and it struck me for its simplicity. A company should be able to answer
-  to a very simple question: *Why should you exist?*
+  to a very simple question: *Why should it exist?*
 * **A positive impact**: *Choose a job you love, and you will never have to
   work a day in your life*. If what you do improves people's lives, I'd love to
   hear from you.
@@ -74,7 +73,7 @@ them!
 * **Elixir/Erlang, Elm, Clojure, Haskell, Scala**: Functional programming is
   very hot right now and I find very interesting how some of the concepts
   helped to solve modern problems (I'm looking at you, state management!). I'd
-  love to work professionaly with one of those, also to explore their
+  love to work professionally with one of those, also to explore their
   shortcomings and *become a better programmer* in the process.
 * **Rust, Go**: Those are relatively new kids on the block! Using modern
   programming languages to write (relatively) low-level programs must be fun,
