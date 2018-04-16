@@ -100,8 +100,9 @@ them!
 
 ## Final thoughts
 
-Quite a list, isn't it? What are your lists of dream requisites for a new job?
-Let me know in the comments!
+Quite a list, isn't it? If you are a fellow developer, what is your list of
+dream requisites for a new job?  Let me know in the comments!
 
-Do you think I would be a good match for your team, either remotely or in
-Zurich? Then [get in touch](mailto:stephane.bisinger@protonmail.com)!
+Are you on the lookout for developers? Do you think I would be a good match for
+your team, either remotely or in Zurich? Then [get in
+touch](mailto:stephane.bisinger@protonmail.com)!
