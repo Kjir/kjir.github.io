@@ -80,7 +80,7 @@ them!
   programming languages to write (relatively) low-level programs must be fun,
   right?
 * **Python, Ruby**: The old reliables. Yes, I've worked with them already, and
-  yes, they still excite me! I know their limits, but I also know how to
+  yes, they still excite me! I know their limitations, but I also know how to
   overcome them when necessary.
 
 ### Not so eager
