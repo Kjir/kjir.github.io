@@ -23,7 +23,7 @@ others understand more what kind of person I am.
 ## Company values
 
 One of the most important points for me when looking for a new job is to check
-which company I'm working for.
+which company I'm going to work for.
 
 ### Must haves
 
