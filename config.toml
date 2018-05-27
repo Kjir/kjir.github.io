@@ -1,49 +1,61 @@
-baseURL = "https://www.sbisinger.ch"
-disablePathToLower = true
-pygmentsuseclasses = true
-pygmentCodeFences = true
-languageCode = "en-us"
+baseurl = "https://www.sbisinger.ch/"
+DefaultContentLanguage = "en"
+#DefaultContentLanguage = "ja"
 title = "Code Lilies"
-disqusShortname = 'codelilies'
-theme = "minimalist"
-[params]
-  site_author = "Stéphane Bisinger"
-  site_description = "Solutions to programming problems in the strive for elegance"
-  location = "Zürich"
-  # Link custom assets relative to /static
-  avatar = "images/profile.png"
-  header_background = "images/editor.png"
-  header_title = "Code Lilies"
-  copyright = "Powered by [Hugo](http://gohugo.io)."
-  custom_css = []
-  custom_js  = []
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "monokai"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+disqusShortname = "codelilies"
+#googleAnalytics = "XXX"
 
-  # Enable gogle analytics by entering your tracking code
-  google_analytics = ""
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "Solutions to programming problems in the strive for elegance"
+  logo = "images/profile.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = true
+  rss = false
+  comments = true
+  readingTime = true
+  useHLJS = false
+  socialShare = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
-[permalinks]
-  post = "/:year/:month/:day/:title/"
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
 
-[social]
-  # Add your social network accounts to the profile section on the left
-  # by entering your username. The links to your account will be
-  # create automatically.
-  twitter   = "SteBjoerne"
-  facebook  = ""
-  linkedin  = ""
-  behance   = ""
-  dribbble  = ""
-  instagram = ""
-  github    = "Kjir"
-  gplus     = ""
-  email     = "stephane.bisinger@protonmail.com"
+[Author]
+  name = "Stéphane Bisinger"
+  website = "https://www.sbisinger.ch"
+  email = "stephane@sbisinger.ch"
+  github = "Kjir"
+  gitlab = "Kjir"
+  twitter = "SteBjoerne"
+  linkedin = "stéphane-bisinger-30b922163"
+  xing = "Stephane_Bisinger"
+  stackoverflow = "users/287030/kjir"
+
 [[menu.main]]
-  name = "Home"
-  weight = -120
-  identifier = "home"
-  url = "/"
+    name = "Blog"
+    url = ""
+    weight = 1
+
 [[menu.main]]
-  name = "CV"
-  weight = -110
-  identifier = "cv"
-  url = "https://www.stackoverflow.com/story/stebis"
+    name = "CV"
+    url = "https://www.stackoverflow.com/story/stebis"
+    weight = 3
