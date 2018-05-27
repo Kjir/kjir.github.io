@@ -13,6 +13,9 @@ pygmentsCodefencesGuessSyntax = true
 disqusShortname = "codelilies"
 #googleAnalytics = "XXX"
 
+[permalinks]
+  post = "/:year/:month/:day/:title/"
+
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
   subtitle = "Solutions to programming problems in the strive for elegance"
