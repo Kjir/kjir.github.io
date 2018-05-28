@@ -1,0 +1,36 @@
+---
+title: "Time for Growth"
+date: 2018-05-27T12:54:41+02:00
+description: "There comes a time when our assumptions need to be challenged. This time has come for me!"
+draft: true
+---
+
+In my [[{{< relref "my-tech-wishlist.md" >}}][last post]] I listed the technologies I'm curious about, but I also listed
+some of the technologies I'm not so enthusiastic about. That triggered some
+reactions and [[https://dev.to/manigandham/comment/31k8][someone pointed out to me]] that my knowledge about C# and Java is
+outdated.
+
+This has been the beginning of a soul-searching process on my part. 
+
+# more
+#+BEGIN_QUOTE
+Rather than seeking to find out more through questions and learning (actions viewed by them as showing vulnerability), arrogant people tend to generalize from their limited, narrow life experiences and try to impose their small worldview on others.
+ -- [[https://www.wikihow.com/Detect-Arrogant-People][How to Detect Arrogant People]]
+#+END_QUOTE
+
+I stumbled upon the previous quote and, while I find it a little harsh, it
+doesn't paint a pretty picture. Am I confining myself to the small enclosure of
+my own comfort zone, forgetting to question it from time to time?
+
+That's when I decided to work on that particular habit of mine to shoot down what I don't like and try to be more open and inclusive. It's a long way, but 
+
+Do I regress to the snotty college student in me looking for his own moral
+compass who acts all righteous and pious? Or should I maybe find better ways to approach the world?
+
+That's when I decided to start questioning my long-held beliefs, starting with
+.NET. I setup a [[https://github.com/Kjir/privy-canister/tree/master/todo-fsharp][proof-of-concept]] project using F# and Docker to see how easy it
+is to get started with it in a cross-platform manner. Although still more
+complicated than what I'm normally used to, I had no troubles getting up and
+going with the help of the official guides. I am impressed.
+
+Next on my list was 
