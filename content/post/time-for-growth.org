@@ -2,7 +2,6 @@
 title: "Time for Growth"
 date: 2018-05-27T12:54:41+02:00
 description: "There comes a time when our assumptions need to be challenged. This time has come for me!"
-draft: true
 ---
 
 In my [[{{< relref "my-tech-wishlist.md" >}}][last post]] I listed the technologies I'm curious about, but I also listed
@@ -13,6 +12,9 @@ outdated.
 This has been the beginning of a soul-searching process on my part. 
 
 # more
+
+** A problem of arrogance?
+
 #+BEGIN_QUOTE
 Rather than seeking to find out more through questions and learning (actions viewed by them as showing vulnerability), arrogant people tend to generalize from their limited, narrow life experiences and try to impose their small worldview on others.
  -- [[https://www.wikihow.com/Detect-Arrogant-People][How to Detect Arrogant People]]
@@ -22,15 +24,71 @@ I stumbled upon the previous quote and, while I find it a little harsh, it
 doesn't paint a pretty picture. Am I confining myself to the small enclosure of
 my own comfort zone, forgetting to question it from time to time?
 
-That's when I decided to work on that particular habit of mine to shoot down what I don't like and try to be more open and inclusive. It's a long way, but 
+Since I've always made it a point to keep my open mindendness as wide as
+possible, I decided to do something about it in order to improve. The time has
+come to let go of some stiff ideas that get in the way, challenge my beliefs and
+grow up as a person.
 
-Do I regress to the snotty college student in me looking for his own moral
-compass who acts all righteous and pious? Or should I maybe find better ways to approach the world?
+** Conquering the mountain of my ego
 
-That's when I decided to start questioning my long-held beliefs, starting with
-.NET. I setup a [[https://github.com/Kjir/privy-canister/tree/master/todo-fsharp][proof-of-concept]] project using F# and Docker to see how easy it
-is to get started with it in a cross-platform manner. Although still more
-complicated than what I'm normally used to, I had no troubles getting up and
-going with the help of the official guides. I am impressed.
+A journey of a thousand miles begins with a single step, says ancient chinese
+lore, so I started to take some baby steps in that direction. I found some very
+inspiring insights in the videos by [[https://twitter.com/jaymeedwards][Jayme Edwards]], who shares what he has
+learned over the years as a software developer in order to lead more healthy
+professional lives.
 
-Next on my list was 
+{{< youtube 8i8B_3OTSjM >}}
+
+His approach really inspired me and made me realize that it's more important to
+me to be helpful on a project or organization rather than being an ass about
+technological choices: while I have my preferences and ideas, I can't let these
+things get in the way of making a positive impact.
+
+I also decided that an update in popular technologies outside my usual picks is
+overdue, so I went ahead and invested some time there.
+
+** New discoveries
+
+The first thing I wanted to find out was how it would look like if I wanted to
+start a project in .NET, for example a simple API. I didn't want to install .NET
+Core on my machine, so I opted for docker images. I created [[https://github.com/Kjir/privy-canister/tree/master/todo-fsharp][a small F# project]]
+and I was surprised! There are relatively few obstacles to get started and while
+it still requires some configuration files, the available documentation is
+excellent and all the basics are already covered. Kudos!
+
+Next I decided to find out what has been happening in the Java world since 2012.
+And to my great surprise the introduction of lambda expressions is a bigger deal
+that I thought! Coupled with the new Stream API, the power of Java has been
+greatly extended.
+
+For example, to loop through an array we can turn this:
+
+#+BEGIN_SRC java
+List<Integer> numbers = Arrays.<Integer>asList(1, 2, 3, 4);
+for(int number : numbers) {
+  System.out.println(number);
+}
+#+END_SRC
+
+into this:
+
+#+BEGIN_SRC java
+List<Integer> numbers = Arrays.<Integer>asList(1, 2, 3, 4);
+numbers.stream()
+  .forEach((number) -> System.out.println(number));
+#+END_SRC
+
+While there are still a lot of limitations due to the way object orientation was
+implemented in the language, this is already a great improvement!
+
+
+** Conclusions
+I am glad to make this effort to widen my horizons. I might never be an actual
+fan of some technologies, but I decided to stop treating this as a deal-breaker.
+Instead I'll give more importance to the people involved in a project and the
+potential positive impact that I can have.
+
+Truth is, horrible code can come from any language, but it is also true that
+with (almost) any language you can build awesome stuff. And regardless, at the
+end of the day I am going to work with people, not programming languages, and if
+the people are cool and I can be of help, what more could I wish for?
