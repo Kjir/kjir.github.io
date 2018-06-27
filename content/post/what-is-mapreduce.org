@@ -1,0 +1,292 @@
+---
+title: "What Is MapReduce?"
+date: 2018-06-01T22:10:55+02:00
+---
+
+In this era of Big Data and the rise of a new species called /Data Scientist/,
+us /"mere"/ Software Developers might have heard of a thing called MapReduce,
+but what is it really? And why has it been a game-changing tool in the last
+decade? This is my attempt to explain the concept in simple terms.
+
+To illustrate the concepts I will use Python, one of the most popular languages
+especially when it comes to data science, and LISP (in particular Clojure) to
+honor the language that introduced the concepts used for MapReduce.
+
+So what is MapReduce? It is an approach to solve some problems that allow us to
+process huge amounts of data in a very simple way. It was described in a [[https://ai.google/research/pubs/pub62][Google
+whitepaper]] in 2004, and it has been the basis for tools like Apache Hadoop,
+among others.
+
+** The old reliable way
+
+But let's not loose ourselves with abstract descriptions and let us start from
+the very beginning - with a simple loop:
+
+#+BEGIN_SRC python
+def powers(numbers):
+  results = []
+  for number in numbers:
+    results.append(number * number)
+  return results
+#+END_SRC
+
+Ok that's not very idiomatic, is it? Here is a better version:
+
+#+BEGIN_SRC python
+def powers(numbers):
+  return [number * number for number in numbers]
+#+END_SRC
+
+I'm sure everyone who can write the above code understands what is going on
+here: we have an array of some sorts and we cycle through the elements. For each
+of those elements we calculate the power of 2 and place that result in a new
+array.
+
+It is not hard to see how this will work at a lower level, in the machine
+itself: the array is an area of memory, we start by pointing at the beginning
+this memory area, read the first value into the CPU register, multiply it by
+itself and store that value in another memory area that corresponds to the new
+array. Then proceed to the next element until the end of the array.
+
+Since we are telling exactly what the computer should do, we call this
+way of writing programs /imperative programming/.
+
+** The /other/ old reliable way
+
+How would the same thing be written in LISP? It's not that complicated:
+
+#+BEGIN_SRC clojure
+(defn powers [numbers] (map (fn [number] (* number number)) numbers))
+#+END_SRC
+
+Whoa! What's up with all the parentheses? Okay, let's break it down in
+easy-to-digest pieces, shall we?
+
+#+BEGIN_SRC clojure
+(defn powers [numbers] ...)
+#+END_SRC
+
+Here we define a function named ~powers~ that takes an argument, ~numbers~.
+
+#+BEGIN_SRC clojure
+(fn [number] ...)
+#+END_SRC
+
+This creates an anonymous function that takes an argument ~number~. In python
+you would accomplish the same with ~lambda number: ...~.
+
+#+BEGIN_SRC clojure
+(* number number)
+#+END_SRC
+
+This looks a bit weird at first, but it just means that we multiply ~number~ by
+itself!
+
+Now for the juicy part:
+
+#+BEGIN_SRC clojure
+(map (fn [number] (* number number)) numbers)
+#+END_SRC
+
+Meet our new friend ~map~! What this function does is simple: return a list of
+values that are the result of the function passed in as the first argument
+applied to every item of the list passed in as the second argument.
+
+Or to put it differently, ~map~ will loop through every value in ~numbers~,
+apply our function to each value, and return the result of this function in a
+new list. It is the equivalent of our for loop!
+
+But let's reflect for a second on what happens at a lower level: from the code
+we see we actually can't know how this will play out! Will we walk through the
+memory in the same order as with the for loop? Or in reverse order? Or with some
+random order? We can't be sure because the detail of how to produce the result
+is not in our hands, but it is taken care by the implementation of our
+programming language.
+
+This is what is called /functional programming/, which is a form of
+ /declarative programming:/ we state what we want, not how to produce our result.
+But why is this important? Is it just a matter of style and personal taste?
+
+** Thinking Big Data
+
+Our example is small enough that the way we loop through the data doesn't
+matter. But what if instead we had a very big list of numbers, greater than what
+can be held in memory? What if instead of multiplying we had to perform a more
+CPU-intensive function? How would this play out?
+
+This is a scenario where you might want to introduce some form of parallelism,
+to use all of your CPU cores. How would that look with our Python example?[fn:1]
+
+#+BEGIN_SRC python
+# To use Threads, we would use ThreadPoolExecutor
+with concurrent.futures.ProcessPoolExecutor(max_workers=NUM_WORKERS) as executor:
+  futures = [executor.submit(expensive_function, number) for number in numbers]
+  concurrent.futures.wait(futures)
+  results = [future.result() for future in futures]
+#+END_SRC
+
+The complexity went definitely up! And this is taking advantage of the
+ ~concurrent.futures~ module, which simplifies already a lot of details.[fn:2]
+
+What about LISP?
+
+Here it is:
+
+#+BEGIN_SRC clojure
+(pmap expensive-function numbers)
+#+END_SRC
+
+The only relevant change is that we use ~pmap~ instead of ~map~, and the only
+reason we have to change function at all is because it might not always be
+desirable to run the function in separate threads. That's not just a matter of
+programming styles or syntactic sugar, this is actually a very big deal!
+
+Now let's extend the reasoning even further: what if we have so much data to
+process, maybe from a file of a few gigabytes or even terabytes, and we can't
+possibly process all of that on one computer. We have to distribute the load
+over hundreds or thousands of servers! How can we do that?
+
+[fn:1] Due to the Global Interpreter Lock, we are actually spawning multiple processes here. Python threads are useless for CPU-intensive operations.
+[fn:2] With the executors you can use executor.map, which is a functional approach to the problem. This highlights how powerful this approach really is.
+
+
+** Distributing work
+
+How could we split our work across various servers, instead of having it in
+separate threads or processes? This is where it starts to get hairy. We have to
+manage somehow our cluster of servers, ensure they are reachable, distribute the
+work, handle failures and retries, and ideally also scale them automatically.
+Seems complicated? Well it is, and since we are talking about a distributed
+system there are many ways things can fail and countless pitfalls to avoid.
+Distributed systems are hard to implement correctly.
+
+So how would our code look like in Python? Honestly, I don't even want to start
+with it. It would be an immense effort to accomplish this and it would certainly
+not fit in this blog post. A possible idea could be to use Celery to enqueue the
+slices of computations and use that to distribute the load across different
+hosts.
+
+How would it look in LISP? Theoretically, it doesn't need to change: we could
+have a ~dmap~ function that distributes work across multiple nodes. In practice
+it is a bit more complicated than that just because we would need to setup our
+cluster and control its behaviour.
+
+I don't want to leave you without an example, though, so here is one written in
+Python, using a library called [[http://scoop.readthedocs.io][Scoop]]:
+
+#+BEGIN_SRC python
+from scoop import futures
+
+list(futures.map(expensive_function, numbers))
+#+END_SRC
+
+Can you tell from the code that this might actually run on multiple machines?
+
+** But what about reduce?
+
+We talked at length about the ~map~ operation, but we haven't mentioned the
+ ~reduce~ yet. What is it about?
+
+I'm sure you encountered this operation quite a few times before, just look at
+this imperative approach to implement the operation:
+
+#+BEGIN_SRC python
+def sum_nums(numbers):
+    count = 0
+    for number in numbers:
+        count += number
+    return count
+#+END_SRC
+
+You've done this or a variation of this a hundred times, I'm sure. It is often
+useful to turn an array into an hash map of some sort, for example this:
+
+#+BEGIN_SRC python
+def group_by_id(customers):
+    customers_map = {}
+    for customer in customers:
+        customers_map[customer.id] = customer
+    return customers_map
+#+END_SRC
+
+How would this look in the functional world? Here it is:
+
+#+BEGIN_SRC clojure
+(defn sum_nums [numbers]
+  (reduce + 0 numbers))
+#+END_SRC
+
+Again the details are hidden and we only provide a combining operation (the ~+~ 
+in our case), an initial value (~0~ which could be omitted in this particular
+case) and the collection.
+
+What will happen is that it will take an element from the collection, combine it
+with our accumulator (that is the initial ~0~), use this combination as the new
+accumulator and proceed with the next element in our collection.
+
+If we combine it with the ~map~ operation we can do some pretty powerful stuff:
+
+#+BEGIN_SRC clojure
+(defn sum_squares [numbers]
+  (reduce + (map * numbers)))
+#+END_SRC
+
+The imperative equivalent is this:
+
+#+BEGIN_SRC python
+def sum_squares(numbers):
+    final_sum = 0
+    for number in numbers:
+        final_sum += number * number
+    return final_sum
+#+END_SRC
+
+** MapReduce at last
+
+Now that we clarified the building blocks and the concepts behind them, it is
+easy to understand what MapReduce is all about. Let's take the example straight
+from Google's Whitepaper, which will count the occurrences of the words in a
+text:
+
+#+BEGIN_SRC c++
+map(String key, String value):
+  // key: document name
+  // value: document contents
+  for each word w in value:
+    EmitIntermediate(w, "1");
+
+reduce(String key, Iterator values):
+  // key: a word
+  // values: a list of counts
+  int result = 0;
+  for each v in values:
+    result += ParseInt(v);
+  Emit(AsString(result));
+#+END_SRC
+
+We first define a map operation, that for each document it receives, it will
+split it into words and for each word emit a key/value pair, where the key is
+the word itself an the value is ~1~ .
+
+The reduce function will then receive the key and the list of values that
+correspond to that key. In our case for each word we would receive a list of
+ones, one for each repetition of the word.
+
+We then take all of those ones and we sum them together. This is then the value
+that we emit.
+
+All of this actually happens in a distributed manner, but the code doesn't
+really need to know. How cool is that?
+
+** Is this the end?
+
+Is that all there is to it? Mostly, yes. Of course there is much more to know,
+but the basic idea is *that* simple. From this idea other cool things were
+built, to the point that [[https://www.youtube.com/watch?v=AZht1rkHIxk][No one at Google uses MapReduce anymore]]!
+
+I hope that this will allow you to understand better what the concepts are
+behind MapReduce and to have a general feeling about what it allows you to do.
+Between this and actually using it there are many more steps to make, but maybe
+now it looks less intimidating.
+
+Was this helpful? Let me know in the comments!
