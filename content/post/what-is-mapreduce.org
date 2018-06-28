@@ -19,7 +19,7 @@ among others.
 
 ** The old reliable way
 
-But let's not loose ourselves with abstract descriptions and let us start from
+But let's not lose ourselves with abstract descriptions and let us start from
 the very beginning - with a simple loop:
 
 #+BEGIN_SRC python
