@@ -43,9 +43,9 @@ pygmentsCodefencesGuessSyntax = true
   [params.style]
     darkestColor = "#1e1b1c"
     darkColor = "#eef8ff"
-    primaryColor = "#e5a288"
+    primaryColor = "#922802"
     lightColor = "#223127"
-    lightestColor = "#3fb5d9"
+    lightestColor = "#2a7a92"
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
