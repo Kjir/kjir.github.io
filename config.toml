@@ -1,21 +1,19 @@
 baseurl = "https://www.sbisinger.ch/"
 DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
 title = "Code Lilies"
-theme = "beautifulhugo"
+theme = "m10c"
 pygmentsStyle = "monokai"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-disqusShortname = "codelilies"
-#googleAnalytics = "XXX"
+# disqusShortname = "codelilies"
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
 
-[Params]
+[params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
   subtitle = "Solutions to programming problems in the strive for elegance"
   logo = "images/profile.png"
@@ -27,6 +25,27 @@ disqusShortname = "codelilies"
   readingTime = true
   useHLJS = false
   socialShare = true
+  author = "Stéphane Bisinger"
+  description = """
+  Hi, my name is Stéphane Bisinger.
+  I write about functional programming, coding best practices, performance optimization and serverless architectures.
+  I'm currently living in the beautiful city of Zürich, Switzerland.
+  """
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/Kjir"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/SteBjoerne"
+  [[params.social]]
+    name = "stackoverflow"
+    url = "https://www.stackoverflow.com/users/287030/kjir"
+  [params.style]
+    darkestColor = "#1e1b1c"
+    darkColor = "#eef8ff"
+    primaryColor = "#e5a288"
+    lightColor = "#223127"
+    lightestColor = "#3fb5d9"
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
@@ -54,7 +73,7 @@ disqusShortname = "codelilies"
 
 [[menu.main]]
     name = "Blog"
-    url = ""
+    url = "/"
     weight = 1
 
 [[menu.main]]
