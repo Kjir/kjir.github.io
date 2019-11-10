@@ -1,7 +1,6 @@
 ---
 title: "Making a team more effective - by having fun!"
 date: 2019-11-09T22:41:12+01:00
-draft: true
 ---
 
 During the last year I've been involved with the reengineering effort at
