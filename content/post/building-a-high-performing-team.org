@@ -1,0 +1,177 @@
+---
+title: "Making a team more effective - by having fun!"
+date: 2019-11-09T22:41:12+01:00
+draft: true
+---
+
+During the last year I've been involved with the reengineering effort at
+[[https://www.homegate.ch/en/][Homegate]]. These 15 months have been very intense, full of ups and downs, hard
+work and awesome colleagues.
+
+I still remember the first days: the team I had in front of me was having a hard
+time trusting each other and people seemed not very close to each other. While
+there were some hints of best practices, there was a need for a lead to set the
+direction and ignite the engine of self-improvement. That's where I decided to
+make an impact.
+
+A year later here I am collecting advice on how to make your teams more
+effective and how to introduce new ideas successfully. Transforming teams into
+the better version of themselves, make people grow professionally and personally
+is such an inspiring job!
+
+And although I have decided to move on to new challenges outside of Homegate, I
+want to continue working on improving teams in the future.
+
+** Growing the full potential of a team
+
+I came to Homegate after the shutdown of siroop, where I learned that
+yes, it is possible to apply great engineering practices and build very strong
+platforms through that. And that it's incredibly fun!
+
+But how could I bring those experiences over to Homegate and get a very
+different organization to reap the same benefits that I observed before?
+
+Here are some tips that come from my direct experience with this problem.
+
+
+*** Listen to the team
+
+The people in the team are the first to know what the pain points are. They
+might even know the solution to the problem, but not how to push it forward. Or
+they might need ideas on how to tackle it. Either way, this is the best place to
+start because you already have buy-in from the team. And once they see the
+results, they'll trust in your other ideas a little more, even if they look
+completely crazy.
+
+*** Create the mechanisms for change in the team
+
+The team itself needs to be in control of their change process. This means that
+if they're not already in place, it's up to you to try and introduce mechanisms
+where the team can discuss issues and agree on solutions together.
+
+At Homegate there was already a good retrospective in place, which became the
+best place to point out things that could be done differently to achieve better
+results.
+
+*** Work with the people
+
+Change is never introduced successfully through force. Any practice that is
+mandated from above will be resisted, no matter how good it is. If you want to
+bring lasting change, you need to get the people on board. You can give some
+inputs to push them a little bit out of their comfort zone, ultimately the team
+has to want to do the experiment and see.
+
+People on the team are your most important asset and you must never lose sight
+of that: ultimately efficiency of processes doesn't matter if the people are
+unhappy.
+
+*** Take little steps
+
+If you are fortunate enough that the team gives you credit it is your
+responsibility not to abuse it. Stepping out of the comfort zone is necessary to
+grow and learn, but you can't go too far out. Identify the area you want to
+improve, challenge some limits in a small but meaningful way, give it time to
+sink in, rinse and repeat.
+
+*** Each team and company is unique
+
+It doesn't matter how well something worked in a different team at a different
+company: you have to adapt everything to your current situation. What worked
+previously might not work here. To quote [[https://youtu.be/fH4gqsIYzyE?t=1740][Kent Beck]]:
+#+begin_quote
+I can't teach you to be more like Facebook, I can teach you to be like *YOU at
+your best*.
+#+end_quote
+
+For example pair programming worked great at siroop. It also worked at Homegate,
+although we used it in a different way. What if you find yourself in a remote
+company with team members distributed acroos time zones? It probably won't work
+as good: while it is feasible, it loses some of the advantages of pairing and a
+lot of the advantages of remote work. In that context, you might want to try
+something else to reach the same goals.
+
+*** Tackle the big problems first
+
+It's a good idea to spend a little time to identify what are the biggest factors
+that hold the team back, and then start working on those. Much like performance
+work in computer programs, the biggest opportunities are behind the biggest
+problems, and they usually require a limited amount of effort to already improve
+the situation.
+
+For example when I started I noticed that work tended to stay for weeks on a
+branch before being merged. So I start to show how you could slice work into
+smaller chunks, point out opportunities to split the pull requests and generally
+transmit the benefits of having small, readable pull requests.
+
+After some time the changes started to become smaller and faster to be merged,
+which dramatically reduced the amount of big merges that caused so many problems
+and slowdowns. And people were happier about that too!
+
+*** Keep the bus factor high
+
+When introducing new ideas to the team you might have to lead by example and be
+the first to do it. This is not enough. Once you have solved a problem, you not
+only have to show the team the how and why, but you have to ensure they are able
+to do it too.
+
+*** Be patient
+
+Changing people's habits takes time. I spent 6 months before we reached
+Continuous Delivery without any manual step. It took close to a year to get
+people to try not having code reviews when code was developed by a pair.
+
+Be patient, give everyone the appropriate time to get used to new concepts, and
+keep doing small steps whenever the time is ripe. Slow but steady always wins.
+
+** How do high performing teams look like?
+
+One year later, how can we tell if the efforts paid off?
+
+There are many metrics that one could look at, but all of them are imperfect. So
+instead of trying to find the perfect measures, I'll point out the aspects that
+make me particularly proud to be part of the team and to have helped to get
+there.
+
+- *Everybody understands most of the project* ::
+     Even though there are varying levels of expertise among the people which
+     tends to naturally make more experienced people as the knowledge holders,
+     most of the team understands the pieces that make up the project, what
+     tools or processes we have in place and why.
+- *Deployments are non-events* ::
+     We deploy multiple times a day straight to production and we never have to
+     worry about introducing big errors. Our testing strategy, our delivery
+     pipeline and our monitoring systems are realiable and have saved us from
+     trouble numerous times before. Therefore the team trusts its system and
+     will proactively work to improve it in case something unexpected passes the
+     checks.
+- *Decisions are a shared responsibility by the team* ::
+     The team decides its own fate and takes care of all the decisions that are
+     needed. This also means that everybody is aware of the ongoing discussion
+     points and what might come next. Nobody needs to "shield" the team from
+     external pressure because the team is mature enough to handle it.
+- *The infrastructure supports other teams too* ::
+     The infrastructure built by the team allows other teams to get started
+     quicker and build on top of what was done. The benefits go beyond the
+     single team, but spread into the whole organization.
+- *The reported bugs are minor* ::
+     Most of the reported bugs are either missing features, edge cases or minor
+     problems. The number of critical problems that require immediate
+     intervention are stuck at /*zero*/.
+- *No overtime required - ever!* ::
+     Our system is designed so that errors are unlikely and recovery is quick
+     and painless. This means that nobody has to do overtime to solve an
+     unexpected bug in production, because the easiest fix is to revert and have
+     a look at it the following day.
+- *People are better at what they do* ::
+     The growth in the single people is definitely noticeable. Not just on the
+     technical side, but also in the way of collaboration with others.
+
+This is a team I am proud to be a member of.
+
+** Additional Reading
+
+If you found this article interesting you might want to check out the following resources:
+
+ * [[https://dev.to/theburningmonk/breaking-the-senior-developer-ceiling-bj2][Breaking the "Senior engineer" ceiling]] by Yan Cui
+ * [[https://nicolefv.com/book][Accelerate: Building and Scaling High Performing Technology Organizations]] by Nicole Forsgren, PhD, Jez Humble and Gene Kim
+ * [[https://charity.wtf/2019/10/28/deploys-its-not-actually-about-fridays/][Deploys: It's not actually about Fridays]] by Charity Majors
