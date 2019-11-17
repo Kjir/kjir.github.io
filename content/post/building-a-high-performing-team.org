@@ -45,7 +45,7 @@ completely crazy.
 *** Create the mechanisms for change in the team
 
 The team itself needs to be in control of their change process. This means that
-if they're not already in place, it's up to you to try and introduce mechanisms
+if they're not already in place, it's up to you to try to introduce mechanisms
 where the team can discuss issues and agree on solutions together.
 
 At Homegate there was already a good retrospective in place, which became the
@@ -57,8 +57,8 @@ results.
 Change is never introduced successfully through force. Any practice that is
 mandated from above will be resisted, no matter how good it is. If you want to
 bring lasting change, you need to get the people on board. You can give some
-inputs to push them a little bit out of their comfort zone, ultimately the team
-has to want to do the experiment and see.
+inputs to push them a little out of their comfort zone, ultimately the team has
+to want to do the experiment and see.
 
 People on the team are your most important asset and you must never lose sight
 of that: ultimately efficiency of processes doesn't matter if the people are
@@ -66,7 +66,7 @@ unhappy.
 
 *** Take little steps
 
-If you are fortunate enough that the team gives you credit it is your
+If you are fortunate enough that the team gives you credit, it is your
 responsibility not to abuse it. Stepping out of the comfort zone is necessary to
 grow and learn, but you can't go too far out. Identify the area you want to
 improve, challenge some limits in a small but meaningful way, give it time to
@@ -83,8 +83,8 @@ your best*.
 #+end_quote
 
 For example pair programming worked great at siroop. It also worked at Homegate,
-although we used it in a different way. What if you find yourself in a remote
-company with team members distributed acroos time zones? It probably won't work
+although we used it differently. What if you find yourself in a remote
+company with team members distributed across time zones? It probably won't work
 as good: while it is feasible, it loses some of the advantages of pairing and a
 lot of the advantages of remote work. In that context, you might want to try
 something else to reach the same goals.
@@ -137,10 +137,10 @@ there.
      most of the team understands the pieces that make up the project, what
      tools or processes we have in place and why.
 - *Deployments are non-events* ::
-     We deploy multiple times a day straight to production and we never have to
+     We deploy multiple times a day straight to production, and we never have to
      worry about introducing big errors. Our testing strategy, our delivery
-     pipeline and our monitoring systems are realiable and have saved us from
-     trouble numerous times before. Therefore the team trusts its system and
+     pipeline and our monitoring systems are reliable and have saved us from
+     trouble numerous times before. Therefore, the team trusts its system, and
      will proactively work to improve it in case something unexpected passes the
      checks.
 - *Decisions are a shared responsibility by the team* ::
@@ -171,6 +171,6 @@ This is a team I am proud to be a member of.
 
 If you found this article interesting you might want to check out the following resources:
 
- * [[https://dev.to/theburningmonk/breaking-the-senior-developer-ceiling-bj2][Breaking the "Senior engineer" ceiling]] by Yan Cui
- * [[https://nicolefv.com/book][Accelerate: Building and Scaling High Performing Technology Organizations]] by Nicole Forsgren, PhD, Jez Humble and Gene Kim
- * [[https://charity.wtf/2019/10/28/deploys-its-not-actually-about-fridays/][Deploys: It's not actually about Fridays]] by Charity Majors
+ + [[https://dev.to/theburningmonk/breaking-the-senior-developer-ceiling-bj2][Breaking the "Senior engineer" ceiling]] by Yan Cui
+ + [[https://nicolefv.com/book][Accelerate: Building and Scaling High Performing Technology Organizations]] by Nicole Forsgren, PhD, Jez Humble and Gene Kim
+ + [[https://charity.wtf/2019/10/28/deploys-its-not-actually-about-fridays/][Deploys: It's not actually about Fridays]] by Charity Majors
