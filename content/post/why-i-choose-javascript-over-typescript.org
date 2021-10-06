@@ -1,0 +1,6 @@
+---
+title: "Why I Choose Javascript Over Typescript"
+date: 2021-10-06T22:36:13+02:00
+draft: true
+---
+

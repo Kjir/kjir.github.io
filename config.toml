@@ -32,14 +32,17 @@ pygmentsCodefencesGuessSyntax = true
   I'm currently living in the beautiful city of Zürich, Switzerland.
   """
   [[params.social]]
+    name = "gitlab"
+    url = "https://gitlab.com/Kjir"
+  [[params.social]]
     name = "github"
     url = "https://github.com/Kjir"
   [[params.social]]
     name = "twitter"
     url = "https://twitter.com/SteBjoerne"
-  [[params.social]]
-    name = "stackoverflow"
-    url = "https://www.stackoverflow.com/users/287030/kjir"
+#  [[params.social]]
+#    name = "stackoverflow"
+#    url = "https://www.stackoverflow.com/users/287030/kjir"
   [params.style]
     darkestColor = "#1e1b1c"
     darkColor = "#eef8ff"
